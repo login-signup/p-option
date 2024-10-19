@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Method Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      border: 2px solid #1E90FF;
+      border-radius: 30px;
+      padding: 70px;
+      width: 700px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #1E90FF;
+      margin-bottom: 20px;
+    }
+    
+
+    label {
+      font-size: 1.2em;
+      color: #333;
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #FFD700;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+
+    button:hover {
+      background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>SELECT THE METHOD YOU PREFER TO BE PAID THROUGH</h2>
+    <form action="/submit" method="POST">
+      <label>
+        <input type="radio" name="payment_method" value="payoneer" required> Payoneer
+      </label>
+      <label>
+        <input type="radio" name="payment_method" value="venmo"> Venmo
+      </label>
+      <label>
+        <input type="radio" name="payment_method" value="employee_ewallet"> Employee Ewallet
+      </label>
+      <label>
+        <input type="radio" name="payment_method" value="veem"> Veem
+      </label>
+      <label>
+        <input type="radio" name="payment_method" value="paxum_bank"> Paxum Bank
+      </label>
+      <label>
+        <input type="radio" name="payment_method" value="CEX.IO Wallet"> CEX.IO Wallet
+      </label>
+      <br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
